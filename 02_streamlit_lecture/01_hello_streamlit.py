@@ -9,12 +9,14 @@ import streamlit as st
 st.set_page_config(
     page_title="스트림릿과의 만남",
     page_icon="🎨",
-    layout="centered"  # "centered" 또는 "wide"
+    layout="wide"  # "centered" 또는 "wide"
 )
 
 # 제목 표시
 st.title("🎉 나의 첫 Streamlit 앱")
-
+# 버튼 생성
+if st.button("눌러보세요"):
+    st.write("안녕 스트림릿")
 # 간단한 텍스트 출력
 st.write("안녕하세요! Streamlit에 오신 것을 환영합니다.")
 
@@ -34,6 +36,7 @@ st.divider()
 st.subheader("버튼을 눌러보세요!")
 if st.button("인사하기"):
     st.balloons()  # 풍선 애니메이션
+else:
     st.success("반갑습니다! 🎊")
 
 # 정보 박스
@@ -50,3 +53,4 @@ st.markdown("""
 3. 새로운 버튼을 추가하고, 클릭 시 다른 메시지가 나오도록 해보세요
 4. `st.warning()` 또는 `st.error()` 함수를 사용해보세요
 """)
+

@@ -38,7 +38,7 @@ st.subheader("여러 줄 입력")
 message = st.text_area(
     "메시지를 입력하세요:",
     placeholder="여기에 메시지를 작성하세요...",
-    height=150
+    height=300 # 높이
 )
 if message:
     st.info(f"입력한 글자 수: {len(message)}자")
